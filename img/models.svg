@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1094px" height="371px" viewBox="0 0 1094 371" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="1094" height="371"></rect>
+            <rect id="Rectangle-Copy-5" fill="#2E2C2C" x="99" y="114" width="248" height="150"></rect>
+            <text id="Пользователь" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="137.089844" y="203">Пользователь</tspan>
+            </text>
+            <rect id="Rectangle-Copy-6" fill="#2E2C2C" x="435" y="114" width="248" height="150"></rect>
+            <text id="Задачи-Подзадачи" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="511.943848" y="182">Задачи</tspan>
+                <tspan x="487.078125" y="218">Подзадачи</tspan>
+            </text>
+            <rect id="Rectangle-Copy-7" fill="#2E2C2C" x="772" y="114" width="248" height="150"></rect>
+            <text id="Комментарии" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="807.523926" y="203">Комментарии</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

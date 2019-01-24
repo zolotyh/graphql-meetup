@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1277px" height="887px" viewBox="0 0 1277 887" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="1277" height="887"></rect>
+            <path id="Line-Copy-8" d="M413,540.543767 L404.178939,556.225653 L402.953286,558.404592 L398.595408,555.953286 L399.821061,553.774347 L413.321061,529.774347 L417.678939,529.774347 L431.178939,553.774347 L432.404592,555.953286 L428.046714,558.404592 L426.821061,556.225653 L418,540.543767 L418,555 L418,644 L418,646.5 L413,646.5 L413,644 L413,555 L413,540.543767 Z" fill="#979797" fill-rule="nonzero" opacity="0"></path>
+            <rect id="Rectangle-Copy-8" fill="#143913" x="103" y="85" width="248" height="150"></rect>
+            <text id="Дерево-задач" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="136.089844" y="168">Дерево задач</tspan>
+            </text>
+            <rect id="Rectangle-Copy-8" fill="#143913" x="616" y="85" width="248" height="150"></rect>
+            <text id="Дерево-задач" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="136.089844" y="168">Дерево задач</tspan>
+            </text>
+            <text id="Главная-панель" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="641.412598" y="168">Главная панель</tspan>
+            </text>
+            <rect id="Rectangle-Copy-12" fill="#143913" opacity="0" x="218" y="656" width="265" height="150"></rect>
+            <text id="Редактирование-описа" opacity="0" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="242.704102" y="726">Редактирование</tspan>
+                <tspan x="289.044434" y="762">описания</tspan>
+            </text>
+            <path id="Line-Copy-9" d="M741,540.543767 L732.178939,556.225653 L730.953286,558.404592 L726.595408,555.953286 L727.821061,553.774347 L741.321061,529.774347 L745.678939,529.774347 L759.178939,553.774347 L760.404592,555.953286 L756.046714,558.404592 L754.821061,556.225653 L746,540.543767 L746,555 L746,644 L746,646.5 L741,646.5 L741,644 L741,555 L741,540.543767 Z" fill="#979797" fill-rule="nonzero" opacity="0"></path>
+            <rect id="Rectangle-Copy-13" fill="#143913" opacity="0" x="578" y="656.5" width="323" height="150"></rect>
+            <text id="Один-комментарий" opacity="0" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="609.336914" y="744">Один комментарий</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

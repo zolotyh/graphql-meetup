@@ -37,19 +37,449 @@
           </p>
         </section>
         <section>
-
+          Нельзя сравнивать теплое с мягким...
         </section>
-        <!--<section>-->
-          <!--Взгляд фронтенд-разработчика-->
-        <!--</section>-->
-        <!--<section>-->
-          <!--Доклад – история одного исследования-->
-        <!--</section>-->
-        <!--<section>-->
-          <!--<p>-->
-            <!--В голове держим Apollo-->
-          <!--</p>-->
-        <!--</section>-->
+        <section>
+          <h2>Redux</h2>
+          <p>A predictable <b>state container</b> for JavaScript apps</p>
+        </section>
+        <section>
+          <h2>GraphQL</h2>
+          <p>
+          GraphQL is a <b>query language</b> for APIs and a runtime for fulfilling those queries with your existing data
+          </p>
+        </section>
+        <section>
+          <img src="img/counter.png" alt="">
+        </section>
+        <section>
+          <p>index.js</p>
+          <pre><code data-trim style="font-size: .6em">
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import Counter from './components/Counter'
+import counter from './reducers'
+
+const store = createStore(counter)
+const rootEl = document.getElementById('root')
+
+const render = () =&gt; ReactDOM.render(
+  &lt;Counter
+    value={store.getState()}
+    onIncrement={() =&gt; store.dispatch({ type: 'INCREMENT' })}
+    onDecrement={() =&gt; store.dispatch({ type: 'DECREMENT' })}
+  /&gt;,
+  rootEl
+)
+
+render()
+store.subscribe(render)
+          </code></pre>
+        </section>
+        <section>
+          <p>reducers.js</p>
+          <pre><code data-trim>
+export default (state = 0, action) =&gt; {
+  switch (action.type) {
+    case 'INCREMENT':
+      return state + 1
+    case 'DECREMENT':
+      return state - 1
+    default:
+      return state
+  }
+}
+          </code></pre>
+        </section>
+        <section>
+          <p>Counter.js</p>
+          <pre><code data-trim style="font-size: .5em">
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    this.incrementAsync = this.incrementAsync.bind(this);
+    this.incrementIfOdd = this.incrementIfOdd.bind(this);
+  }
+
+  incrementIfOdd() {
+    if (this.props.value % 2 !== 0) {
+      this.props.onIncrement()
+    }
+  }
+
+  incrementAsync() {
+    setTimeout(this.props.onIncrement, 1000)
+  }
+
+  render() {
+    const { value, onIncrement, onDecrement } = this.props
+    return (
+      &lt;p&gt;
+        Clicked: {value} times
+        {' '}
+        &lt;button onClick={onIncrement}&gt;
+          +
+        &lt;/button&gt;
+        {' '}
+        &lt;button onClick={onDecrement}&gt;
+          -
+        &lt;/button&gt;
+      &lt;/p&gt;
+    )
+  }
+}
+
+Counter.propTypes = {
+  value: PropTypes.number.isRequired,
+  onIncrement: PropTypes.func.isRequired,
+  onDecrement: PropTypes.func.isRequired
+}
+
+export default Counter
+          </code></pre>
+        </section>
+        <section>
+          А не слишком ли много кода?!
+        </section>
+        <section>
+          <h2>index.js</h2>
+          <pre><code data-trim>
+const container = document.getElementById('container');
+let value = 0;
+
+document.querySelector('...')
+  .addEventListener('click', () =&gt; container.innerHTML = ++value);
+  
+document.querySelector('...')
+  .addEventListener('click', () =&gt; container.innerHTML = --value);
+          </code></pre>
+        </section>
+        <section>
+          Зачем все это нужно?
+        </section>
+        <section>
+          <img src="img/pinky.jpeg" alt="">
+        </section>
+        <section>
+          <img src="img/pinky2.png" alt="">
+        </section>
+        <section>
+          <img src="img/wrike.png" alt="">
+        </section>
+        <section>
+          <p>New Wrike</p>
+          <img src="img/wrike_multi.png" alt="">
+        </section>
+        <section data-transition="slide none">
+          Jquery plugin
+        </section>
+        <section data-transition="none slide">
+          <strike>
+            Jquery plugin
+          </strike>
+        </section>
+        <section>
+          MVC
+        </section>
+        <section style="text-align: center">
+          <p>
+            бизнес-логика 
+            <br>
+            vs 
+            <br>
+            логика-отображения
+          </p>
+        </section>
+        <section>
+          <p>MV*</p>
+          <img src="img/mvc.png" alt="">
+        </section>
+        <section>
+          <p>New Wrike</p>
+          <img src="img/wrike_multi.png" alt="">
+        </section>
+        <section>
+          <img src="img/models.svg" alt="">
+        </section>
+        <section>
+          <p>New Wrike</p>
+          <img src="img/wrike_multi.png" alt="">
+        </section>
+        <section data-transition="none slide">
+          <img src="img/1w.svg" alt="">
+        </section>
+        <section data-transition="none">
+          <img src="img/2w.svg" alt="">
+        </section>
+        <section data-transition="none slide">
+          <img src="img/3w.svg" alt="">
+        </section>
+        <section>
+          <p>MV*</p>
+          <img src="img/mvcfail.png" alt="">
+        </section>
+        <section>
+          <p>FLUX</p>
+          <img src="img/flux-simple.png" alt="">
+        </section>
+        <section>
+          <p>FLUX</p>
+          <img src="img/flux-complex.png" alt="">
+        </section>
+        <section>
+          <img src="img/product.jpg" alt="">
+        </section>
+        <section>
+          <h2>Product manager</h2>
+          <p>Человек, который ломает нормальные астракции о неадекватные требования клиентов</p>
+        </section>
+        <section data-transition="none">
+          <img src="img/b1.png" alt="">
+        </section>
+        <section data-transition="none">
+          <img src="img/b2.png" alt="">
+        </section>
+        <section>
+          <img src="img/b3.png" alt="">
+        </section>
+        <section>
+          <p>
+            Redux
+          </p>
+          <img src="img/redux.png" alt="">
+        </section>
+        <section>
+          app = fx(state)
+        </section>
+        <section>
+          <img src="img/product.jpg" alt="">
+        </section>
+        <section>
+          Нам важен быстрый старт приложения
+        </section>
+        <section data-transition="slide none">
+          <img src="img/a_1.png" alt="">
+        </section>
+        <section>
+          Critical path
+        </section>
+        <section data-transition="none">
+          <p>&nbsp;</p>
+          <img src="img/loading.png" alt="">
+        </section>
+        <section data-transition="none">
+          <p>1. GET /task/1</p>
+          <img src="img/a1.png" alt="">
+        </section>
+        <section data-transition="none">
+          <p>2. GET /task/1/subtasks</p>
+          <img src="img/a2.png" alt="">
+        </section>
+        <section data-transition="none">
+          <p>3. GET /task/1/comments</p>
+          <img src="img/a3.png" alt="">
+        </section>
+        <section data-transition="none">
+          <p>4. GET /get-folder-tree</p>
+          <img src="img/a4.png" alt="">
+        </section>
+        <section>
+          Один запрос на View
+        </section>
+        <section data-transition="none">
+          <p>Что нужно получить c сервера?</p>
+          <img src="img/a0.png" alt="">
+        </section>
+        <section data-transition="slide none">
+          JSON
+        </section>
+        <section data-transition="slide none">
+          большой JSON
+        </section>
+        <section data-transition="slide none">
+          очень большой JSON
+        </section>
+        <section>
+          <p>Ваш бекенд разработчик</p>
+          <img src="img/redeye.jpg" alt="">
+        </section>
+        <section>
+          <p>frontend server + backend server</p>
+        </section>
+        <section>
+          <h2>
+            SSR
+          </h2>
+          <p>server side rendering</p>
+        </section>
+        <section>
+          <p>vk.com</p>
+          <img src="img/ssr.png" alt="">
+        </section>
+        <section>
+          <p>amazon.com</p>
+          <img src="img/amazon.png" alt="">
+        </section>
+        <section>
+          <p>Все еще</p>
+          <img src="img/redeye.jpg" alt="">
+        </section>
+        <section>
+          <h2>GraphQL</h2>
+          <img src="img/graphiql.png" alt="">
+        </section>
+        <section>
+          appVK = fx(query, serverState)
+        </section>
+        <section>
+          <img src="img/product.jpg" alt="">
+        </section>
+        <section>
+          Нужно быть оптимистичным
+        </section>
+        <section>
+          Как сейчас
+        </section>
+        <section>
+          <img src="img/m1.png" alt="">
+        </section>
+        <section>
+          <img src="img/m5.png" alt="">
+        </section>
+        <section>
+          <img src="img/m3.png" alt="">
+        </section>
+        <section>
+          Как нужно
+        </section>
+        <section>
+          <img src="img/m1.png" alt="">
+        </section>
+        <section>
+          <img src="img/m2.png" alt="">
+        </section>
+        <section>
+          <img src="img/m3.png" alt="">
+        </section>
+        <section>
+          <p>Решение</p>
+          <p class="fragment">Subscription</p>
+        </section>
+        <section data-transition="slide none">
+          <p>
+            Типизация
+          </p>
+          <pre><code style="font-size: .7em" data-trim data-noescape>
+const mapStateToProps = (state: Types.RootState) =&gt; ({
+  count: state.counters.reduxCounter,
+});
+
+const mapDispatchToProps = (dispatch: Dispatch&lt;Types.RootAction&gt;) =&gt;
+  bindActionCreators(
+    {
+      onIncrement: countersActions.increment,
+    },
+    dispatch
+  );
+
+export const FCCounterConnectedVerbose = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FCCounter);
+          </code></pre>
+        </section>
+        <section data-transition="slide none">
+          <p>
+            Типизация
+          </p>
+          <pre><code style="font-size: .7em" data-trim data-noescape>
+const mapStateToProps = (state: Types.RootState) =&gt; ({
+  count: state.counters.reduxCounter,
+});
+
+const mapDispatchToProps = (dispatch: Dispatch&lt;Types.RootAction&gt;) =&gt;
+  bindActionCreators(
+    {
+      onIncrement: countersActions.increment,
+    },
+    dispatch
+  );
+
+export const FCCounterConnectedVerbose = <mark>connect</mark>(
+  mapStateToProps,
+  mapDispatchToProps
+)(FCCounter);
+          </code></pre>
+        </section>
+        <section>
+          Пример с дженериком
+          <pre><code data-trim data-noescape style="font-size: 0.5em">
+import * as React from 'react'
+import * as Redux from 'redux'
+
+import { MyReduxState } from './my-root-reducer.ts'
+
+export interface OwnProps {
+  propFromParent: number
+}
+
+interface StateProps {
+  propFromReduxStore: string
+}
+     
+interface DispatchProps {
+  onSomeEvent: () =&gt; void
+}
+ 
+type Props = StateProps & DispatchProps & OwnProps
+ 
+interface State {
+  internalComponentStateField: string
+}
+
+class MyComponent extends React.Component&lt;Props, State&gt; {
+  ...
+}
+ 
+function mapStateToProps(state: MyReduxState, ownProps: OwnProps): StateProps {
+  ...
+}
+ 
+function mapDispatchToProps(dispatch: Redux.Dispatch&lt;any&gt;, ownProps: OwnProps): DispatchProps {
+  ...
+}
+  
+export default connect&lt;StateProps, DispatchProps, OwnProps&gt;
+  (mapStateToProps, mapDispatchToProps)(MyComponent)
+          </code></pre>
+        </section>
+        <section>
+          <h2>
+            GraphQL Кодогенерация
+          </h2>
+        </section>
+        <section>
+          <p>Ложка детктя</p>
+        </section>
+        <section>
+          Оптимизация запросов
+        </section>
+        <section>
+          Производительность
+        </section>
+        <section>
+          Не подходит для супербольших комманд
+        </section>
+        <section>
+          Мало успешных кейсов
+        </section>
+        <section>
+          Спасибо за внимание!
+        </section>
       </div>
     </div>
     <script src="lib/js/head.min.js"></script>

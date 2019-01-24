@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1277px" height="887px" viewBox="0 0 1277 887" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="1277" height="887"></rect>
+            <path id="Line-Copy-4" d="M743.643217,350.002151 L752.742861,334.480258 L754.007223,332.32355 L758.320639,334.852272 L757.056278,337.008981 L743.129927,360.764122 L738.772744,360.686315 L725.703399,336.449108 L724.516845,334.248633 L728.917794,331.875525 L730.104348,334.075999 L738.644014,349.91288 L738.901242,335.508136 L740.500399,245.955364 L740.545034,243.455763 L745.544237,243.545034 L745.499601,246.044636 L743.900445,335.597408 L743.643217,350.002151 Z" fill="#979797" fill-rule="nonzero"></path>
+            <path id="Line-Copy-8" d="M413,540.543767 L404.178939,556.225653 L402.953286,558.404592 L398.595408,555.953286 L399.821061,553.774347 L413.321061,529.774347 L417.678939,529.774347 L431.178939,553.774347 L432.404592,555.953286 L428.046714,558.404592 L426.821061,556.225653 L418,540.543767 L418,555 L418,644 L418,646.5 L413,646.5 L413,644 L413,555 L413,540.543767 Z" fill="#979797" fill-rule="nonzero" opacity="0"></path>
+            <path id="Line-Copy-6" d="M423.883562,357.182649 L441.759618,359.226985 L444.243429,359.511037 L443.675323,364.478658 L441.191513,364.194605 L413.833494,361.065896 L412.142389,357.049522 L429.022869,335.294076 L430.555433,333.318918 L434.505748,336.384046 L432.973184,338.359204 L421.943277,352.574472 L435.089596,347.03918 L680.529857,243.695912 L682.833946,242.725769 L684.774231,247.333946 L682.470143,248.304088 L437.029881,351.647356 L423.883562,357.182649 Z" fill="#979797" fill-rule="nonzero"></path>
+            <path id="Line-Copy-7" d="M1041.40282,352.188235 L1031.26863,337.321128 L1029.86052,335.2554 L1033.99198,332.439185 L1035.40009,334.504913 L1050.90974,357.257951 L1048.97467,361.162642 L1021.47597,362.601804 L1018.97938,362.732465 L1018.71806,357.739298 L1021.21465,357.608638 L1039.18263,356.668272 L1026.35672,350.312069 L820.389902,248.240019 L818.149884,247.129921 L820.370079,242.649884 L822.610098,243.759981 L1028.57691,345.832032 L1041.40282,352.188235 Z" fill="#979797" fill-rule="nonzero"></path>
+            <rect id="Rectangle-Copy-8" fill="#143913" x="103" y="85" width="248" height="150"></rect>
+            <text id="Дерево-задач" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="136.089844" y="168">Дерево задач</tspan>
+            </text>
+            <rect id="Rectangle-Copy-8" fill="#143913" x="616" y="85" width="248" height="150"></rect>
+            <text id="Дерево-задач" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="136.089844" y="168">Дерево задач</tspan>
+            </text>
+            <text id="Главная-панель" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="641.412598" y="168">Главная панель</tspan>
+            </text>
+            <rect id="Rectangle-Copy-9" fill="#143913" x="293" y="370" width="248" height="150"></rect>
+            <text id="Описание" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="351.375" y="453">Описание</tspan>
+            </text>
+            <rect id="Rectangle-Copy-12" fill="#143913" opacity="0" x="218" y="656" width="265" height="150"></rect>
+            <text id="Редактирование-описа" opacity="0" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="242.704102" y="726">Редактирование</tspan>
+                <tspan x="289.044434" y="762">описания</tspan>
+            </text>
+            <path id="Line-Copy-9" d="M741,540.543767 L732.178939,556.225653 L730.953286,558.404592 L726.595408,555.953286 L727.821061,553.774347 L741.321061,529.774347 L745.678939,529.774347 L759.178939,553.774347 L760.404592,555.953286 L756.046714,558.404592 L754.821061,556.225653 L746,540.543767 L746,555 L746,644 L746,646.5 L741,646.5 L741,644 L741,555 L741,540.543767 Z" fill="#979797" fill-rule="nonzero" opacity="0"></path>
+            <rect id="Rectangle-Copy-13" fill="#143913" opacity="0" x="578" y="656.5" width="323" height="150"></rect>
+            <text id="Один-комментарий" opacity="0" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="609.336914" y="744">Один комментарий</tspan>
+            </text>
+            <rect id="Rectangle-Copy-10" fill="#143913" x="619" y="370" width="248" height="150"></rect>
+            <text id="Комментарии" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="653.023926" y="453">Комментарии</tspan>
+            </text>
+            <rect id="Rectangle-Copy-11" fill="#143913" x="945" y="368" width="248" height="150"></rect>
+            <text id="Подзадчи" font-family="SFProDisplay-Light, SF Pro Display" font-size="30" font-weight="300" fill="#FFFFFF">
+                <tspan x="1004.44434" y="451">Подзадчи</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
