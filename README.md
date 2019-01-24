@@ -1,1 +1,1 @@
-[https://zolotyh.github.io/dartup](https://zolotyh.github.io/dartup)
+[https://zolotyh.github.io/graphql-meetup/](https://zolotyh.github.io/graphql-meetup/)
