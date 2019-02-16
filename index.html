@@ -382,6 +382,9 @@ const query = gql`query TaskList {
           Мы получили единственный источник правды
         </section>
         <section>
+          <a href="https://habr.com/ru/company/jugru/blog/421789/">habr.com/ru/company/jugru/blog/421789/</a>
+        </section>
+        <section>
           <h2>2. Быстрый старт</h2>
         </section>
         <section>
@@ -678,6 +681,10 @@ export const wrapper = graphql(GetPerson, {...});
         progress: true,
         slideNumber: true,
         history: true,
+        keyboard: {
+  39: 'navigateNext',
+  37: 'navigatePrev'
+        },
         dependencies: [
           { src: 'plugin/markdown/marked.js' },
           { src: 'plugin/markdown/markdown.js' },
