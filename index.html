@@ -37,6 +37,18 @@
           </p>
         </section>
         <section>
+          <img src="img/wrike.png" alt="">
+        </section>
+	<section>
+	  <img src="img/infobip.jpg" alt="">
+	  <p class="fragment">2017 году более 60% людей в мире получили сообщения через платформу INFOBIP</p>
+	</section>
+        <section>
+          <h2>
+            GraphQL — новый Redux
+          </h2>
+        </section>
+        <section>
           Нельзя сравнивать теплое с мягким...
         </section>
         <section>
@@ -48,6 +60,11 @@
           <p>
           GraphQL is a <b>query language</b> for APIs and a runtime for fulfilling those queries with your existing data
           </p>
+        </section>
+        <section>
+          <h2>
+            1. Управление состоянием
+          </h2>
         </section>
         <section>
           <img src="img/counter.png" alt="">
@@ -153,13 +170,16 @@ let value = 0;
 
 document.querySelector('...')
   .addEventListener('click', () =&gt; container.innerHTML = ++value);
-  
+
 document.querySelector('...')
   .addEventListener('click', () =&gt; container.innerHTML = --value);
           </code></pre>
         </section>
         <section>
           Зачем все это нужно?
+        </section>
+        <section>
+          <p>Примеры из реальной жизни</p>
         </section>
         <section>
           <img src="img/pinky.jpeg" alt="">
@@ -174,22 +194,28 @@ document.querySelector('...')
           <p>New Wrike</p>
           <img src="img/wrike_multi.png" alt="">
         </section>
-        <section data-transition="slide none">
-          Jquery plugin
-        </section>
-        <section data-transition="none slide">
-          <strike>
-            Jquery plugin
-          </strike>
+        <section>
+          <p>Такой стиль не пройдет</p>
+          <pre><code data-trim>
+const container = document.getElementById('container');
+let value = 0;
+
+document.querySelector('...')
+  .addEventListener('click', () =&gt; container.innerHTML = ++value);
+
+document.querySelector('...')
+  .addEventListener('click', () =&gt; container.innerHTML = --value);
+          </code></pre>
         </section>
         <section>
-          MVC
+          MV*
+          <p class="fragment">Если бы мы писали приложение в 2010</p>
         </section>
         <section style="text-align: center">
           <p>
-            бизнес-логика 
+            бизнес-логика
             <br>
-            vs 
+            vs
             <br>
             логика-отображения
           </p>
@@ -218,6 +244,9 @@ document.querySelector('...')
         </section>
         <section data-transition="none slide">
           <img src="img/3w.svg" alt="">
+        </section>
+        <section>
+          Слишком много связей
         </section>
         <section>
           <p>MV*</p>
@@ -257,13 +286,98 @@ document.querySelector('...')
           app = fx(state)
         </section>
         <section>
-          <img src="img/product.jpg" alt="">
+          <h2>JS</h2>
+          <pre><code data-trim data-noescape="">
+          connect(mapStateToProps, mapDispatchToProps)(Component);
+          </code></pre>
         </section>
         <section>
-          Нам важен быстрый старт приложения
+          <h2>
+          Typescript
+          </h2>
+        </section>
+        <section>
+          <pre><code data-trim data-noescape>
+interface OwnProps {}
+interface StateProps {}
+interface DispatchProps {}
+<span class="fragment">
+type Props = StateProps & DispatchProps & OwnProps
+</span>
+<span class="fragment">
+interface State {}
+</span>
+
+          </code></pre>
+        </section>
+        <section>
+          <pre><code data-trim>
+class MyComponent extends React.Component&lt;Props, State&gt; {
+  ...
+}
+          </code></pre>
+        </section>
+        <section>
+          <pre><code>
+function mapStateToProps(state: MyReduxState, ownProps: OwnProps): StateProps {
+  ...
+}
+
+function mapDispatchToProps(dispatch: Redux.Dispatch&lt;any&gt;, ownProps: OwnProps): DispatchProps {
+  ...
+}
+          </code></pre>
+        </section>
+        <section>
+        <pre><code data-trim>
+export default connect&lt;StateProps, DispatchProps, OwnProps&gt;
+  (mapStateToProps, mapDispatchToProps)(MyComponent)
+        </code></pre>
+        </section>
+        <section>
+           Как сделать декларативнее?
+        </section>
+        <section>
+          <p>Запрос к дереву</p>
+          <pre><code data-trim data-noescape>
+const query = gql`query TaskList {
+<span class="fragment">  tasks(limit: 10, offset: 0) {
+      <span class="fragment">id</span>
+      <span class="fragment">title</span>
+      <span class="fragment">users(limit: 10, offset: 0){
+        name
+      }</span>
+      <span class="fragment">subtasks(limit: 10, offset: 0){
+        title
+      }</span>
+    }
+</span>}`;
+          </code></pre>
+          <p>Все остальное можно получить из схемы</p>
+        </section>
+        <section>
+          А что если унести данные на сервер
+        </section>
+        <section>
+          Mutation == Action
+        </section>
+        <section>
+          app = fx(query, state)
+        </section>
+        <section>
+          Мы получили единственный источник правды
+        </section>
+        <section>
+          <h2>2. Быстрый старт</h2>
+        </section>
+        <section>
+          <img src="img/product.jpg" alt="">
         </section>
         <section data-transition="slide none">
           <img src="img/a_1.png" alt="">
+        </section>
+        <section>
+          И так еще 2 минуты
         </section>
         <section>
           Critical path
@@ -309,7 +423,8 @@ document.querySelector('...')
           <img src="img/redeye.jpg" alt="">
         </section>
         <section>
-          <p>frontend server + backend server</p>
+          <h2>BFF</h2>
+          <p>Backend For Frontend</p>
         </section>
         <section>
           <h2>
@@ -334,7 +449,7 @@ document.querySelector('...')
           <img src="img/graphiql.png" alt="">
         </section>
         <section>
-          appVK = fx(query, serverState)
+          <h2>3. Оптимистичные обновления</h2>
         </section>
         <section>
           <img src="img/product.jpg" alt="">
@@ -367,119 +482,150 @@ document.querySelector('...')
           <img src="img/m3.png" alt="">
         </section>
         <section>
-          <p>Решение</p>
-          <p class="fragment">Subscription</p>
-        </section>
-        <section data-transition="slide none">
-          <p>
-            Типизация
-          </p>
-          <pre><code style="font-size: .7em" data-trim data-noescape>
-const mapStateToProps = (state: Types.RootState) =&gt; ({
-  count: state.counters.reduxCounter,
-});
-
-const mapDispatchToProps = (dispatch: Dispatch&lt;Types.RootAction&gt;) =&gt;
-  bindActionCreators(
-    {
-      onIncrement: countersActions.increment,
-    },
-    dispatch
-  );
-
-export const FCCounterConnectedVerbose = connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(FCCounter);
+          <p>Решение &mdash; Мутация</p>
+          <pre><code data-trim data-noescape="">
+          const mutation = gql`mutation UpdateTask($id: ID, $title: String){
+            updateTask(id: $id, title: $title) {
+              id
+              title
+            }
+          }`
           </code></pre>
         </section>
-        <section data-transition="slide none">
-          <p>
-            Типизация
-          </p>
-          <pre><code style="font-size: .7em" data-trim data-noescape>
-const mapStateToProps = (state: Types.RootState) =&gt; ({
-  count: state.counters.reduxCounter,
-});
+        <section data-transition="none">
+          <img src="img/m1.png" alt="">
+        </section>
+        <section>
+          <p>В браузере кэш - плоский список</p>
+          <pre><code data-trim data-noescape="">
+{
+  "task1": {title: 'Захватить мир'},
+  "task2": {title: 'task 1'},
+  "user1": {name: 'user 1'},
+  "user2": {name: 'user 2'},
+}
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <img src="img/m1.png" alt="">
+        </section>
+        <section data-transition="none">
+          <p>В браузере</p>
+          <pre><code data-trim data-noescape="">
+{
+  "task1": {title: <mark>'Захватить мир'</mark>},
+  "task2": {title: 'task 1'},
+  "user1": {name: 'user 1'},
+  "user2": {name: 'user 2'},
+}
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <p>В браузере</p>
+          <pre><code data-trim data-noescape="">
+{
+  "task1": {title: <mark>'Новый заголовок'</mark>},
+  "task2": {title: 'task 1'},
+  "user1": {name: 'user 1'},
+  "user2": {name: 'user 2'},
+}
+          </code></pre>
+        </section>
+        <section data-transition="none">
+          <img src="img/m1.png" alt="">
+        </section>
+        <section>
+          <img src="img/m2.png" alt="">
+        </section>
+        <section>
+          Запрос успешен
+        </section>
+        <section>
+          <img src="img/m2.png" alt="">
+        </section>
+        <section>
+          <img src="img/m3.png" alt="">
+        </section>
+        <section>
+          app = fx(query, state)
+        </section>
+        <section>
+          app = fx(query, <strike>state</strike>)
+        </section>
+        <section>
+          <h2>4. Практическое удобство</h2>
+        </section>
+        <section>
+          react-apollo
+        </section>
+        <section>
+          <pre><code data-trim data-noescape>
 
-const mapDispatchToProps = (dispatch: Dispatch&lt;Types.RootAction&gt;) =&gt;
-  bindActionCreators(
-    {
-      onIncrement: countersActions.increment,
-    },
-    dispatch
-  );
+<span class="fragment">const client = new ApolloClient({ uri: '...'});</span>
 
-export const FCCounterConnectedVerbose = <mark>connect</mark>(
-  mapStateToProps,
-  mapDispatchToProps
-)(FCCounter);
+<span class="fragment">
+const WrappedApp = (
+  &lt;ApolloProvider client={client}&gt;
+    &lt;App /&gt;
+  &lt;/ApolloProvider&gt;
+);
+</span>
           </code></pre>
         </section>
         <section>
-          Пример с дженериком
-          <pre><code data-trim data-noescape style="font-size: 0.5em">
-import * as React from 'react'
-import * as Redux from 'redux'
+          <pre><code data-trim data-noescape>
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
 
-import { MyReduxState } from './my-root-reducer.ts'
+<span class="fragment">const query = gql`...`;</span>
 
-export interface OwnProps {
-  propFromParent: number
-}
+<span class="fragment">export const wrapper = graphql(query, {
+  options: ...
+  props: ...
+});</span>
 
-interface StateProps {
-  propFromReduxStore: string
-}
-     
-interface DispatchProps {
-  onSomeEvent: () =&gt; void
-}
- 
-type Props = StateProps & DispatchProps & OwnProps
- 
-interface State {
-  internalComponentStateField: string
-}
+<span class="fragment">const Component = wrapper(Component);</span>
 
-class MyComponent extends React.Component&lt;Props, State&gt; {
-  ...
-}
- 
-function mapStateToProps(state: MyReduxState, ownProps: OwnProps): StateProps {
-  ...
-}
- 
-function mapDispatchToProps(dispatch: Redux.Dispatch&lt;any&gt;, ownProps: OwnProps): DispatchProps {
-  ...
-}
-  
-export default connect&lt;StateProps, DispatchProps, OwnProps&gt;
-  (mapStateToProps, mapDispatchToProps)(MyComponent)
           </code></pre>
         </section>
         <section>
           <h2>
-            GraphQL Кодогенерация
+            5. Кодогенерация
           </h2>
         </section>
         <section>
-          <p>Ложка детктя</p>
+           Можно сгенерировать интерфейсы на любом языке
         </section>
         <section>
-          Оптимизация запросов
+          <h2>6. Недостатки</h2>
+          <ul>
+            <li class="fragment">Набили мало шишек</li>
+            <li class="fragment">Сложность входа</li>
+          </ul>
         </section>
         <section>
-          Производительность
+          <p>Что не так с GraphQL</p>
+          <a href="https://habr.com/ru/post/425041/">habr.com/ru/post/425041/</a>
         </section>
         <section>
-          Не подходит для супербольших комманд
+          <p>Выводы</p>
+          <ol>
+            <li class="fragment">Управление состоянием</li>
+            <li class="fragment">Быстрый старт</li>
+            <li class="fragment">Оптимистические обновления</li>
+            <li class="fragment">Практическое удобство</li>
+            <li class="fragment">Генерация типов</li>
+            <li class="fragment">Проблемы</li>
+          </ol>
         </section>
         <section>
-          Мало успешных кейсов
-        </section>
-        <section>
-          Спасибо за внимание!
+          <p>
+          Спасибо, вопросы!
+          </p>
+
+          <p>
+          twitter  - @zolotyh
+          </p>
         </section>
       </div>
     </div>
