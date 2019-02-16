@@ -593,13 +593,32 @@ import gql from 'graphql-tag';
 
 <span class="fragment">const query = gql`...`;</span>
 
-<span class="fragment">export const wrapper = graphql(query, {
-  options: ...
-  props: ...
-});</span>
+<span class="fragment">export const wrapper = graphql(query, {...});</span>
 
 <span class="fragment">const Component = wrapper(Component);</span>
 
+          </code></pre>
+        </section>
+        <section>
+          <p>Фрагменты</p>
+          <pre><code data-trim data-noescape="">
+<span class="fragment">fragment NameParts on Person {
+  firstName
+  lastName
+}</span>
+
+<span class="fragment">query GetPerson {
+  people(id: "7") {
+    ...NameParts
+    avatar(size: LARGE)
+  }
+}</span>
+
+          </code></pre>
+        </section>
+        <section>
+          <pre><code data-trim data-noescape>
+export const wrapper = graphql(GetPerson, {...});
           </code></pre>
         </section>
         <section>
