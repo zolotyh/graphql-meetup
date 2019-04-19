@@ -44,6 +44,9 @@
           <img src="img/holy.jpg" alt="">
         </section>
         <section>
+          <img src="img/graphql-course.png" alt="">
+        </section>
+        <section>
           <h2>
             GraphQL — новый Redux
           </h2>
@@ -356,6 +359,23 @@ export default connect&lt;StateProps, DispatchProps, OwnProps&gt;
            Как сделать декларативнее?
         </section>
         <section>
+          Jora от Ромы Дворнова
+        </section>
+        <section>
+          <pre><code data-trim>
+        {
+            name,
+            dependencies: dependencies
+                .mapToArray("name")
+                .map(::self)
+                [name in #.name or dependencies]
+        }
+          </code></pre>
+        </section>
+        <section>
+          <a href="https://github.com/lahmatiy/jora">github.com/lahmatiy/jora</a>
+        </section>
+        <section>
           <p>Запрос к дереву</p>
           <pre><code data-trim data-noescape>
 const query = gql`query TaskList {
@@ -384,9 +404,6 @@ const query = gql`query TaskList {
         </section>
         <section>
           Мы получили единственный источник правды
-        </section>
-        <section>
-          <a href="https://habr.com/ru/company/jugru/blog/421789/">habr.com/ru/company/jugru/blog/421789/</a>
         </section>
         <section>
           <h2>2. Быстрый старт</h2>
