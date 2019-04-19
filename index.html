@@ -37,10 +37,7 @@
           </p>
         </section>
         <section>
-          <img src="img/wrike.png" alt="">
-        </section>
-        <section>
-          <img src="img/infobip.jpg" alt="">
+          <img src="img/infobip.svg" alt="">
           <p class="fragment">2017 году более 60% людей в мире получили сообщения через платформу INFOBIP</p>
         </section>
         <section>
@@ -125,7 +122,7 @@ export default (state = 0, action) =&gt; {
         </section>
         <section>
           <p>Counter.js</p>
-          <pre><code data-trim style="font-size: .5em">
+          <pre><code data-trim style="font-size: .3em">
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
@@ -202,17 +199,26 @@ document.querySelector('...')
           <img src="img/pinky2.png" alt="">
         </section>
         <section>
-          <img src="img/wrike.png" alt="">
-        </section>
-        <section>
-          <p>New Wrike</p>
           <img src="img/wrike_multi.png" alt="">
         </section>
-        <section>
+        <section data-transition="slide none">
           <p>Такой стиль не пройдет</p>
           <pre><code data-trim>
 const container = document.getElementById('container');
 let value = 0;
+
+document.querySelector('...')
+  .addEventListener('click', () =&gt; container.innerHTML = ++value);
+
+document.querySelector('...')
+  .addEventListener('click', () =&gt; container.innerHTML = --value);
+          </code></pre>
+        </section>
+        <section data-transition="none slide">
+          <p>Такой стиль не пройдет</p>
+          <pre><code data-trim data-noescape>
+const container = document.getElementById('container');
+<mark>let value = 0;</mark>
 
 document.querySelector('...')
   .addEventListener('click', () =&gt; container.innerHTML = ++value);
@@ -239,7 +245,6 @@ document.querySelector('...')
           <img src="img/mvc.png" alt="">
         </section>
         <section>
-          <p>New Wrike</p>
           <img src="img/wrike_multi.png" alt="">
         </section>
         <section>
@@ -247,7 +252,6 @@ document.querySelector('...')
           <img src="img/models.svg" alt="">
         </section>
         <section>
-          <p>New Wrike</p>
           <img src="img/wrike_multi.png" alt="">
         </section>
         <section data-transition="none slide">
